@@ -5,7 +5,7 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of items; let i = index">
-  <span>{{ item.name }}</span>
+  <span>{{ item.title }}</span>
   <span>{{ item.price | currency }}</span>
   <span><button class="button" (click)="removeItem(i)">Eliminar</button></span>
 </div>

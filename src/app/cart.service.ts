@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
   items: Product[] = [];
-  /* . . . */
 
   constructor(private http: HttpClient) {}
 

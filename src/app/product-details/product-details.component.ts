@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
-import { Product, products } from '../products';
+import { Product } from '../products';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -19,10 +20,20 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private http: HttpClient
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    const productId = this.route.snapshot.paramMap.get('productId');
+    this.http
+      .get<Product>(`https://fakestoreapi.com/products/${productId}`)
+      .subscribe((product) => {
+        this.product = product;
+      });
+  }
+
+  /*ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
@@ -31,5 +42,5 @@ export class ProductDetailsComponent implements OnInit {
     this.product = products.find(
       (product) => product.id === productIdFromRoute
     );
-  }
+  }*/
 }

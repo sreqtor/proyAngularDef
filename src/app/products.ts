@@ -7,7 +7,7 @@ export interface Product {
   image: string;
 }
 
-export const products = [
+/*export const products = [
   {
     id: 1,
     title: 'Phone XL',
@@ -32,7 +32,7 @@ export const products = [
     category: 'phone',
     image: 'https://www.blitzmicro.eu/17417-medium_default/AP-MLPK3QLA.jpg',
   },
-];
+];*/
 
 /*
 Copyright Google LLC. All Rights Reserved.
