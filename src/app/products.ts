@@ -1,31 +1,38 @@
 export interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
   description: string;
+  category: string;
+  image: string;
 }
 
 export const products = [
   {
     id: 1,
-    name: 'Phone XL',
+    title: 'Phone XL',
     price: 799,
-    description: 'A large phone with one of the best screens'
+    description: 'A large phone with one of the best screens',
+    category: 'phone',
+    image: 'https://www.blitzmicro.eu/17417-medium_default/AP-MLPK3QLA.jpg',
   },
   {
     id: 2,
-    name: 'Phone Mini',
+    title: 'Phone Mini',
     price: 699,
-    description: 'A great phone with one of the best cameras'
+    description: 'A great phone with one of the best cameras',
+    category: 'phone',
+    image: 'https://www.blitzmicro.eu/17417-medium_default/AP-MLPK3QLA.jpg',
   },
   {
     id: 3,
-    name: 'Phone Standard',
+    title: 'Phone Standard',
     price: 299,
-    description: ''
-  }
+    description: '',
+    category: 'phone',
+    image: 'https://www.blitzmicro.eu/17417-medium_default/AP-MLPK3QLA.jpg',
+  },
 ];
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
